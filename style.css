@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-corlor: white;
+    --tt-color: #323238;
+
+    --bg-button-base: #E1E1E6;
+    --tt-button-base: #323238;
+
+    --bg-button-select: #02799D;
+    --tt-button-select: white;
+
+    --text-timer:#323238;
+
+    --ft-timer: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-corlor);
+    color: var(--text-timer);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+    display: grid;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+   justify-content: flex-end;
+}
+
+.aparence {
+    padding: 6.4rem 6.4rem 0 0 ;
+}
+
+.aparence button {
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+main {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    gap: 17rem;
+    padding: 19rem 23rem;
+}
+
+.timer {
+    justify-content: center;
+    align-items: center;
+}
+
+.timer span {
+    font-family: var(--ft-timer);
+    font-size: 12.6rem;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+
+    align-items: center;
+    margin-top: 4.8rem;
+}
+
+.controls button {
+    border: none;
+    background: transparent;
+
+    height: 4.8rem;
+    width: 4.8rem;
+
+    transition: 0.5s;
+}
+
+.controls button svg path {
+    fill: var(--tt-button-base);
+}
+
+.cards {
+    
+    display: grid;
+    gap: 3.2rem;
+    
+    position: relative;
+    grid-template-areas:
+    "A B"
+    "C D"
+    ;
+}
+
+.cards button {
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+.cards button svg path:nth-child(1) {
+    fill: var(--bg-button-base)
+}
+
+.cards button svg path:nth-child(2) {
+    fill: var(--tt-button-base)
+}
+
+.cards button.on svg path:nth-child(1) {
+    fill: var(--bg-button-select);
+}
+
+.cards button.on svg path:nth-child(2) {
+    fill: var(--tt-button-select);
+}
+
+.sliders {
+    position: relative;
+    scale: 0.8;
+    bottom: 4rem;
+    
+    border: none;
+}
+
+.slide-tree,
+.slide-rain,
+.slide-fire,
+.slide-coffe {
+    appearance: none;
+    background: var(--tt-button-base);
+    height: 0.5rem;
+    border-radius: 10rem;
+}
+
+.slide-tree::-webkit-slider-thumb,
+.slide-rain::-webkit-slider-thumb,
+.slide-fire::-webkit-slider-thumb,
+.slide-coffe::-webkit-slider-thumb {
+    appearance: none;
+    background: var(--tt-button-base);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 10rem;
+}
+
+.slide-rain.on,
+.slide-tree.on,
+.slide-fire.on,
+.slide-coffe.on {
+    appearance: none;
+    background: var(--tt-button-select);
+    height: 0.5rem;
+    border-radius: 10rem;
+}
+
+.slide-rain.on::-webkit-slider-thumb,
+.slide-tree.on::-webkit-slider-thumb,
+.slide-fire.on::-webkit-slider-thumb,
+.slide-coffe.on::-webkit-slider-thumb {
+    appearance: none;
+    background: var(--tt-button-select);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 10rem;
+}
+
+
+
+.hide {
+    display: none;
+}
+
